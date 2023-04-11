@@ -1,0 +1,18 @@
+apiVersion: "ryax.tech/v2.0"
+kind: Processor
+spec:
+  id: get-wiki-article
+  human_name: Get Wiki Article
+  type: python3
+  version: "1.0.0"
+  description: Get a wiki article
+  inputs:
+    - help: "Name of the wiki page"
+      human_name: Page Name
+      name: pagename
+      type: string
+  outputs:
+    - help: "Page info as a json file"
+      human_name: Page Info File
+      name: pageinfo
+      type: file

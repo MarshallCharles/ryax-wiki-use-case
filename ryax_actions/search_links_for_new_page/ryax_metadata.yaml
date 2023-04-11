@@ -1,0 +1,26 @@
+apiVersion: "ryax.tech/v2.0"
+kind: Processor
+spec:
+  id: get-unindexed
+  human_name: Get New Page from Links
+  type: python3
+  version: "1.0.0"
+  description: Get a new page using links in the s3
+  inputs:
+  - help: A 20 character long string.
+    human_name: Your AWS key id.
+    name: key_id
+    type: string
+  - help: A 40 character long string.
+    human_name: Your AWS secret key id.
+    name: secret_key_id
+    type: password
+  - help: Bucket Name
+    human_name: bucket name
+    name: bucket_name
+    type: string
+  outputs:
+    - help: "Request to get a new page."
+      human_name: Page Request
+      name: pagereq
+      type: longstring
