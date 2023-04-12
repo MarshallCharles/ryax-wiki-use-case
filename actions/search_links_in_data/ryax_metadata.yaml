@@ -23,4 +23,4 @@ spec:
   - help: JSON Request for a new page
     human_name: Page Req
     name: pagereq
-    type: string
+    type: longstring
