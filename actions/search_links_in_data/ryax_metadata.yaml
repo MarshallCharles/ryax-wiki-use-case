@@ -1,0 +1,26 @@
+apiVersion: ryax.tech/v2.0
+kind: Processor
+spec:
+  type: python3
+  version: '1.0'
+  description: Follow Links from s3 bucket items
+  human_name: Follow Links
+  id: follow-links
+  inputs:
+  - help: Key ID
+    human_name: s3 Key
+    name: key
+    type: string
+  - help: Secret
+    human_name: s3 Secret
+    name: secret
+    type: password
+  - help: bucket name
+    human_name: bucket name
+    name: bucket
+    type: string
+  outputs:
+  - help: JSON Request for a new page
+    human_name: Page Req
+    name: pagereq
+    type: string

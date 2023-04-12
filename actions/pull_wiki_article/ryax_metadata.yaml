@@ -1,0 +1,18 @@
+apiVersion: ryax.tech/v2.0
+kind: Processor
+spec:
+  type: python3
+  version: '1.0'
+  description: Scrape a wiki page by name
+  human_name: Scrape Wiki Page
+  id: scrape-wiki
+  inputs:
+  - help: Name of the wiki page
+    human_name: Page Name
+    name: pagename
+    type: string
+  outputs:
+  - help: Page info as JSON
+    human_name: Page Info
+    name: pageinfo
+    type: file
